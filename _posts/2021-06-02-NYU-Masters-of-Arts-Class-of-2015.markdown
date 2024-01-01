@@ -8,5 +8,5 @@ external_url:
 school: TISCH School of the Arts
 major: Moving Image Archiving and Preservation
 category: edu
-description: 
+edu_description: 
 ---

@@ -15,73 +15,69 @@
                             <h2>{{ post.title }}</h2>
                             <hr class="star-primary">
                             <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
-                            
-                            <ul class="list-inline item-details">
 
-                                <!-- FOR WORK -->
-                                {% if post.client %}
-                                    <li>Work for: 
-                                        <strong><a href="{{ post.external_url }}" target=”_blank”>{{ post.client }}</a>
-                                        </strong>
-                                    </li>
-                                {% endif %}
-                                {% if post.start-date %}
-                                <li>Since:
-                                    <strong>{{ post.start-date }}</a>
-                                    </strong>
-                                </li>
-                                {% endif %}
+                            <!-- FOR WORK -->
                             
+                            <ul style="list-style: none;">
+                                {% if post.client %}
+                                    <li>Company: <a href="{{ post.external_url }}" target=”_blank”>{{ post.client }}</a></li>
+                                {% endif %}
+
+                                {% if post.start-date %}
+                                <li>Since: {{ post.start-date }}</li>
+                                {% endif %}
                                 
-                                <!-- FOR EDU -->
+                                {% if post.work_description %}
+                                <p><li>{{ post.work_description }}</li></p>
+                                {% endif %}
+<!-- 
+                                {% if post.example_project %}
+                                <li> <a href="{{ post.example_project_link }}" target=”_blank”>{{ post.example_project }}</li></a>
+                                {% endif %} -->
+                            
+                         
+
+                            <!-- FOR EDU  -->
+                            
                                 {% if post.school %}
-                                    <li>Education:
-                                        <strong>{{ post.school }}</strong>
-                                    </li>
+                                    <li>Education: {{ post.school }} </li>
                                 {% endif %}
 
                                 {% if post.graduated %}
-                                <li>Date:
-                                    <strong> {{ post.graduated }}</a>
-                                    </strong>
-                                </li>
+                                    <li> Date: {{ post.graduated }} </li>
                                 {% endif %}
                                 
                                 {% if post.major %}
-                                    <li>Studied:
-                                        <strong>{{ post.major }}</a>
-                                        </strong>
-                                    </li>
+                                    <li> Studied: {{ post.major }} </li>
                                 {% endif %}
+                                
+                                {% if post.edu_description %}
+                                    <p><li> {{ post.edu_description }} </li></p>
+                                {% endif %}
+                                
                            
 
                             <!-- FOR PROJECTS -->
+                            
                                 {% if post.affiliation %}
-                                    <li>Organization:
-                                        <strong><a href="{{ post.external_url }}" target=”_blank”>{{ post.affiliation }}</a>
-                                        </strong>
-                                    </li>
+                                    <li> Organization: <a href="{{ post.external_url }}" target=”_blank”>{{ post.affiliation }}</a></li>
                                 {% endif %}
+
                                 {% if post.member %}
-                                <li>Member since:
-                                    <strong> {{ post.member }}</a>
-                                    </strong>
-                                </li>
+                                <li>Member since: {{ post.member }} </li>
                                 {% endif %}
-                                
-                                {% if post.position %}
-                                    <li>Position:
-                                        <strong>{{ post.position }}</a>
-                                        </strong>
-                                    </li>
+
+                                {% if post.org_description %}
+                                    <p><li> {{ post.org_description }} </li></p>
                                 {% endif %}
                             </ul>
-                            <div>
-                                {% if post.description %}
-                                    <p>{{ post.description }}</p>
-                                {% endif %}
-                            </div>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+
+                            <button type="button" 
+                                class="btn btn-default" 
+                                data-dismiss="modal">
+                                <i class="fa fa-times"></i> 
+                                    Close
+                            </button>
                         </div>
                     </div>
                 </div>

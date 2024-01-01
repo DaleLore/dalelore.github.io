@@ -1,0 +1,48 @@
+current directory: /home/lorena/Desktop/Lore/dalelore.github.io/vendor/bundle/ruby/3.0.0/gems/nokogumbo-2.0.5/ext/nokogumbo
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20231229-2488264-oghfm2.rb extconf.rb
+checking for whether -I/home/lorena/Desktop/Lore/dalelore.github.io/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.11.7-x86_64-linux/ext/nokogiri is accepted as CFLAGS... yes
+checking for whether -I/home/lorena/Desktop/Lore/dalelore.github.io/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.11.7-x86_64-linux/ext/nokogiri/include is accepted as CFLAGS... yes
+checking for whether -I/home/lorena/Desktop/Lore/dalelore.github.io/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.11.7-x86_64-linux/ext/nokogiri/include/libxml2 is accepted as CFLAGS... yes
+checking for libxml/tree.h... yes
+checking for nokogiri.h... yes
+creating Makefile
+
+current directory: /home/lorena/Desktop/Lore/dalelore.github.io/vendor/bundle/ruby/3.0.0/gems/nokogumbo-2.0.5/ext/nokogumbo
+make DESTDIR\= clean
+
+current directory: /home/lorena/Desktop/Lore/dalelore.github.io/vendor/bundle/ruby/3.0.0/gems/nokogumbo-2.0.5/ext/nokogumbo
+make DESTDIR\=
+compiling ./../../gumbo-parser/src/ascii.c
+compiling ./../../gumbo-parser/src/attribute.c
+compiling ./../../gumbo-parser/src/char_ref.c
+compiling ./../../gumbo-parser/src/error.c
+compiling ./../../gumbo-parser/src/foreign_attrs.c
+compiling nokogumbo.c
+nokogumbo.c: In function ‘wrap_parse_args’:
+nokogumbo.c:492:3: warning: ‘rb_cData’ is deprecated: by: rb_cObject.  Will be removed in 3.1. [-Wdeprecated-declarations]
+  492 |   return Data_Wrap_Struct(rb_cData, parse_args_mark, RUBY_NEVER_FREE, args);
+      |   ^~~~~~
+In file included from /usr/include/ruby-3.0.0/ruby/internal/core.h:27,
+                 from /usr/include/ruby-3.0.0/ruby/ruby.h:26,
+                 from /usr/include/ruby-3.0.0/ruby.h:38,
+                 from nokogumbo.c:22:
+/usr/include/ruby-3.0.0/ruby/internal/core/rdata.h:169:1: note: declared here
+  169 | rb_cData(void)
+      | ^~~~~~~~
+compiling ./../../gumbo-parser/src/parser.c
+compiling ./../../gumbo-parser/src/string_buffer.c
+compiling ./../../gumbo-parser/src/string_piece.c
+compiling ./../../gumbo-parser/src/svg_attrs.c
+compiling ./../../gumbo-parser/src/svg_tags.c
+compiling ./../../gumbo-parser/src/tag.c
+compiling ./../../gumbo-parser/src/tag_lookup.c
+compiling ./../../gumbo-parser/src/token_buffer.c
+compiling ./../../gumbo-parser/src/tokenizer.c
+compiling ./../../gumbo-parser/src/utf8.c
+compiling ./../../gumbo-parser/src/util.c
+compiling ./../../gumbo-parser/src/vector.c
+linking shared-object nokogumbo/nokogumbo.so
+
+current directory: /home/lorena/Desktop/Lore/dalelore.github.io/vendor/bundle/ruby/3.0.0/gems/nokogumbo-2.0.5/ext/nokogumbo
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 nokogumbo.so ./.gem.20231229-2488264-d76gvt/nokogumbo
